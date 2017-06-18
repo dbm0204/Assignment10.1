@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-
+/**
+ * This is the MainActivity
+ */
 public class MainActivity extends Activity {
     int i = 1;
 
@@ -21,6 +23,9 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.fragment_simple);
         if (savedInstanceState == null) {
+            /**
+             * Fragment is being intialized and instantiated
+             */
             Fragment newFragment = SimpleAddition.newInstance(i);
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             ft.add(R.id.FrameLayout1, newFragment).commit();
